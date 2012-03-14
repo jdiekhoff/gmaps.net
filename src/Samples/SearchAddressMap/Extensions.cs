@@ -14,7 +14,7 @@ namespace Google.Api.Maps.Service.Samples.SearchAddressMap
 			foreach (var result in results)
 			{
 				var node = new TreeViewItem();
-				node.Header = "(" + result.Types.FirstOrDefault() + ") " + result.FormattedAddress;
+                node.Header = string.Format("({0} / {1}) {2}", result.Types.FirstOrDefault(), result.Geometry.LocationType, result.FormattedAddress);
 				node.Tag = result.Geometry.Location;
 
 				foreach (var component in result.Components)

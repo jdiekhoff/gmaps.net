@@ -102,6 +102,12 @@ namespace Google.Api.Maps.Service
 				case "postal_code":
 					result = AddressType.PostalCode;
 					break;
+                case "postal_town":
+                    result = AddressType.PostalTown;
+                    break;
+                case "postal_code_prefix":
+                    result = AddressType.PostalCodePrefix;
+                    break;
 				case "natural_feature":
 					result = AddressType.NaturalFeature;
 					break;
@@ -128,7 +134,7 @@ namespace Google.Api.Maps.Service
 					break;
 			}
 
-			return result;
+            return result;
 		}
 
 		public static LocationType AsLocationType(this string s)
