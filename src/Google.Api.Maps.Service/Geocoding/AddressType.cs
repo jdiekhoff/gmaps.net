@@ -108,6 +108,16 @@ namespace Google.Api.Maps.Service.Geocoding
 		/// </summary>
 		PostalCode,
 
+        /// <summary>
+        /// (Not documented) Indicates the Postal Town (nearest large town / city for UK addresses)
+        /// </summary>
+        PostalTown,
+
+        /// <summary>
+        /// (Not documented) First half of postcode for the UK
+        /// </summary>
+        PostalCodePrefix,
+
 		/// <summary>
 		/// Indicates a prominent natural feature.
 		/// </summary>
