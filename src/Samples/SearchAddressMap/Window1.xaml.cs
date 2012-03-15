@@ -25,7 +25,7 @@ namespace Google.Api.Maps.Service.Samples.SearchAddressMap
 
 			var location = ((GeographicPosition)((TreeViewItem)resultsTreeView.SelectedItem).Tag);
 			var map = new StaticMap();
-			map.Center = location.Latitude.ToString(CultureInfo.InvariantCulture) + "," + location.Longitude;
+			map.Center = location.Latitude.ToString(CultureInfo.InvariantCulture) + "," + location.Longitude.ToString(CultureInfo.InvariantCulture);
 			map.Zoom = zoomSlider.Value.ToString("0");
 			map.Size = "332x332";
 			map.Markers = map.Center;
