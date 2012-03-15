@@ -44,5 +44,11 @@ namespace Google.Api.Maps.Service.Geocoding
 		/// </summary>
 		[JsonProperty("viewport")]
 		public Viewport Viewport { get; set; }
+
+        /// <summary>
+        /// The precise bounds of the geocoding result, if applicable. Null if not.
+        /// </summary>
+        [JsonProperty("bounds")]
+        public Viewport Bounds { get; set; }
 	}
 }
