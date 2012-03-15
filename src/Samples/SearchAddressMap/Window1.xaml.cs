@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Globalization;
 using Google.Api.Maps.Service.Geocoding;
 using Google.Api.Maps.Service.StaticMaps;
 
@@ -24,7 +25,7 @@ namespace Google.Api.Maps.Service.Samples.SearchAddressMap
 
 			var location = ((GeographicPosition)((TreeViewItem)resultsTreeView.SelectedItem).Tag);
 			var map = new StaticMap();
-			map.Center = location.Latitude.ToString() + "," + location.Longitude;
+			map.Center = location.Latitude.ToString(CultureInfo.InvariantCulture) + "," + location.Longitude;
 			map.Zoom = zoomSlider.Value.ToString("0");
 			map.Size = "332x332";
 			map.Markers = map.Center;
