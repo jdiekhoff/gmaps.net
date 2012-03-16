@@ -20,9 +20,13 @@ using Newtonsoft.Json;
 
 namespace Google.Api.Maps.Service.Geocoding
 {
-    [Obsolete("This class has been obsoleted by GeographicBounds and will be removed in a future release")]
 	[JsonObject(MemberSerialization.OptIn)]
-	public class Viewport : GeographicBounds
+	public class GeographicBounds
 	{
+		[JsonProperty("southwest")]
+		public GeographicPosition Southwest { get; set; }
+
+		[JsonProperty("northeast")]
+		public GeographicPosition Northeast { get; set; }
 	}
 }
